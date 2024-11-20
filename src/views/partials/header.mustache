@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./image/icon.png" type="image/png">    
+    <title>Filmatch</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <a href="/"><div class="log">Fil<span>match</span></div></a>
+            <ul>
+                <li><a href="/" class="{{#menu.all}}action{{/menu.all}}">All</a></li>
+                <li><a href="/action" class="{{#menu.action}}action{{/menu.action}}">Action</a></li>
+                <li><a href="/drama" class="{{#menu.drama}}action{{/menu.drama}}">Drama</a></li>
+                <li><a href="/comedy" class="{{#menu.comedy}}action{{/menu.comedy}}">Comedy</a></li>
+                <li><a href="/romance" class="{{#menu.romance}}action{{/menu.romance}}">Romance</a></li>
+                <li><a href="/horror" class="{{#menu.horror}}action{{/menu.horror}}">Horror</a></li> 
+            </ul>
+            <div class="search">
+                <form action="/search" method="GET">
+                    <input type="text" placeholder="Search for movies" name="q" value="{{query}}">
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="menu_mob">
+        <nav>
+            <ul>
+                <li><a href="/" class="{{#menu.all}}action{{/menu.all}}">All</a></li>
+                <li><a href="/action" class="{{#menu.action}}action{{/menu.action}}">Action</a></li>
+                <li><a href="/drama" class="{{#menu.drama}}action{{/menu.drama}}">Drama</a></li>
+                <li><a href="/comedy" class="{{#menu.comedy}}action{{/menu.comedy}}">Comedy</a></li>
+                <li><a href="/romance" class="{{#menu.romance}}action{{/menu.romance}}">Romance</a></li>
+                <li><a href="/horror" class="{{#menu.horror}}action{{/menu.horror}}">Horror</a></li> 
+            </ul>
+        </nav>
+    </div>
+    {{#banner}}
+    <div class="header_img" style="background-image: url('../image/{{background}}');">    
+        <h2>{{title}}</h2>  
+    </div>
+    {{/banner}} 
+    {{#banner2}}
+    <div class="header_img" style="background-image: url('../image/{{background}}');">    
+        <h2>{{title}}</h2>  
+    </div>
+    {{/banner2}} 
+  
