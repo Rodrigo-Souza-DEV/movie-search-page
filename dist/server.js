@@ -18,7 +18,8 @@ server.use(routes_1.default);
 server.use((req, res) => {
     res.render('pages/404');
 });
-server.listen(process.env.PORT, () => {
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
     console.log('=====================================');
     console.log('              OK');
     console.log('=====================================');
